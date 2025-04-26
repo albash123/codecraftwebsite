@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft-Man</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <!-- ✨ Animated Glassy Navbar ✨ -->
+    <nav id="magicNav" class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center pe-3" href="#">
+                <span class="brand-icon me-2"><i class="fas fa-plus"></i></span>
+                CodeCraft-Man
+            </a>
+
+            <!-- Burger -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link cool-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link cool-link" href="#">Work</a></li>
+                    <li class="nav-item"><a class="nav-link cool-link" href="#">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link cool-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link cool-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link cool-link" href="#">FAQ</a></li>
+                </ul>
+
+                <!-- Cart + CTA -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-dark position-relative cart-btn">
+                        <i class="fas fa-shopping-cart fs-5"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <a href="#" class="btn cta-btn">Buy Template</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--  Blur-shadow on scroll -->
+    <script>
+        document.addEventListener('scroll', () => {
+            const nav = document.getElementById('magicNav');
+            nav.classList.toggle('scrolled', window.scrollY > 40);
+        });
+    </script>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <div class="hero-badge">
+                <span class="hero-badge-icon">
+                    <i class="fas fa-plus"></i>
+                </span>
+                More than 100 finished projects
+            </div>
+            <h1 class="hero-title">Functional Design<br>Better Conversions</h1>
+            <p class="hero-subtitle">Every element guides users and delivers results. We design websites that turn
+                visitors into customers.</p>
+            <a href="#" class="btn btn-primary btn-lg">Get Started Today</a>
+        </div>
+
+        <!-- Floating Icons -->
+        <div class="floating-icon icon-layers">
+            <i class="fas fa-layer-group"></i>
+        </div>
+        <div class="floating-icon icon-star">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="floating-icon icon-pen">
+            <i class="fas fa-pen"></i>
+        </div>
+        <div class="floating-icon icon-bolt">
+            <i class="fas fa-bolt"></i>
+        </div>
+    </section>
+    <!-- 🔥 Optional: subtle parallax on scroll -->
+    <script>
+        document.addEventListener('scroll', () => {
+            const y = window.scrollY * 0.15;
+            document.querySelectorAll('.floating-icon').forEach(el => {
+                el.style.transform = `translateY(${y}px)`;  // gentle drift
+            });
+        });
+    </script>
+
+
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="clients-slider">
+            <!-- ①—single “track” that we animate -->
+            <div class="logos-track">
+                <!-- ②—list your logos ONCE … -->
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+
+                <!-- ③—and then repeat EXACTLY the same six again.
+                 Duplication makes the loop seamless. -->
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+                <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Us Section -->
+    <section class="about-us-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <div class="about-icon-wrapper mx-auto mx-md-0">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h1 class="about-title">About Us</h1>
+                </div>
+                <div class="col-md-7">
+                    <p class="about-description">
+                        We are a designs agency committed to making brands stand out. From shaping identities to
+                        designing seamless digital experiences, we create clear, modern, and impactful work. Our
+                        approach balances creativity and functionality, ensuring every detail serves a purpose. Whether
+                        launching a new venture or refining an established presence, we transform ideas into effective
+                        designs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Service section-->
+    <div class="container">
+        <section class="services-section ">
+            <h2 class="section-title">Our Services</h2>
+
+            <div class="row g-4">
+                <!-- UI/UX Design Card -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">
+                            We create clean, modern interfaces that make interactions seamless and intuitive. We are
+                            focused on usability, clarity, and real results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Webflow Development Card -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Webflow Development</h3>
+                        <p class="service-description">
+                            We build fast, responsive, and easy-to-manage websites using Webflow. Our sites are made to
+                            look great and work effortlessly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SEO Optimization Card -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="service-title">SEO Optimization</h3>
+                        <p class="service-description">
+                            We optimize websites to rank higher and reach the right audience. Every detail is fine-tuned
+                            for better visibility and traffic.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- UI/UX Design Card -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">
+                            We create clean, modern interfaces that make interactions seamless and intuitive. We are
+                            focused on usability, clarity, and real results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Webflow Development Card -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Webflow Development</h3>
+                        <p class="service-description">
+                            We build fast, responsive, and easy-to-manage websites using Webflow. Our sites are made to
+                            look great and work effortlessly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SEO Optimization Card -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="service-title">SEO Optimization</h3>
+                        <p class="service-description">
+                            We optimize websites to rank higher and reach the right audience. Every detail is fine-tuned
+                            for better visibility and traffic.
+                        </p>
+                    </div>
+                </div>
+                <!-- product showcasing -->
+                <section>
+                    <div class="container">
+                        <section class="projects-section">
+                            <h2 class="section-title fade-up">Latest Projects</h2>
+
+                            <div class="row g-4">
+                                <!-- Forma Project -->
+                                <div class="col-12 col-md-6">
+                                    <div class="project-card fade-up" data-delay="1">
+                                        <div class="project-image">
+                                            <img src="./logo.png" alt="Forma – colorful abstract paint splash"
+                                                class="img-fluid">
+                                        </div>
+                                        <h3 class="project-title">Forma</h3>
+                                        <p class="project-description">A sleek and modern branding project.</p>
+                                        <div class="project-tags">
+                                            <a href="#" class="tag primary">Preview Pages</a>
+                                            <a href="#" class="tag secondary">Packaging Design</a>
+                                            <a href="#" class="tag secondary">Webflow Development</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Lume Project -->
+                                <div class="col-12 col-md-6">
+                                    <div class="project-card fade-up" data-delay="2">
+                                        <div class="project-image">
+                                            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1965&q=80"
+                                                alt="Lume – minimalist white architectural pattern" class="img-fluid">
+                                        </div>
+                                        <h3 class="project-title">Lume</h3>
+                                        <p class="project-description">A minimalist website redesign for a creative
+                                            studio.</p>
+                                        <div class="project-tags">
+                                            <a href="#" class="tag secondary">Branding</a>
+                                            <a href="#" class="tag secondary">Visual Identity</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const targets = document.querySelectorAll('.fade-up');
+
+                        const io = new IntersectionObserver(entries => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('in-view');   // triggers CSS transition
+                                    io.unobserve(entry.target);              // remove line to replay every scroll-in
+                                }
+                            });
+                        }, { threshold: 0.15 });                       // 15 % visible before firing
+
+                        targets.forEach(el => io.observe(el));
+                    });
+                </script>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeEls = document.querySelectorAll('.fade-up');
+
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        io.unobserve(entry.target);      // fire once; remove if you want repeat
+                    }
+                });
+            }, { threshold: 0.15 });                // trigger when 15 % visible
+
+            fadeEls.forEach(el => io.observe(el));
+        });
+    </script>
+
+    <!--  Testimonials Section   -->
+    <div class="container">
+        <section class="testimonials-section">
+            <h2 class="section-title" data-aos="fade-up">Testimonials</h2>
+
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-12 col-md-6">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <p class="testimonial-text">
+                            Working with DesignFlow was a game-changer. Our website not only looks amazing but also
+                            performs better than
+                            ever. Conversions went up, and user engagement improved instantly!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Carter">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Carter</div>
+                                <div class="author-title">Founder of NovaTech</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-12 col-md-6">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <p class="testimonial-text">
+                            Clean, modern, and effective design—exactly what we needed. The process was smooth,
+                            communication was great,
+                            and every detail was thoughtfully executed. The results speak for themselves!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophia Martinez">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Sophia Martinez</div>
+                                <div class="author-title">Marketing Director at Lume</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-12 col-md-6">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <p class="testimonial-text">
+                            From branding to Webflow development, everything was handled with precision. The attention
+                            to detail and
+                            strategic approach set them apart. We are so glad we chose them for our project!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="James Reynolds">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">James Reynolds</div>
+                                <div class="author-title">CEO at Bright Solutions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="col-12 col-md-6">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                        <p class="testimonial-text">
+                            Our brand finally has a strong online presence, thanks to DesignFlow. They understood our
+                            vision and turned
+                            it into something incredible. Working with them is one of the best experiences we’ve ever
+                            had!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Lee">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Emma Lee</div>
+                                <div class="author-title">Creative Director at Artisan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- row -->
+        </section>
+    </div><!-- container -->
+
+    <!-- In <head> -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Just before </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700,     // animation speed in ms
+            easing: 'ease-out',// feel free to experiment
+            once: true         // fire only the first time (set false to replay)
+        });
+    </script>
+
+    <!-- ███ FAQ SECTION ███ -->
+    <div class="container my-5">
+        <section class="faq-section">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h2 class="section-title" data-aos="fade-up">FAQs</h2>
+                    <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+                        Got questions? We've got answers. Explore our FAQs to learn more about our process, pricing, and
+                        how we can
+                        bring your vision to life.
+                    </p>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Is coding knowledge required to customize DesignFlow?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No, coding knowledge is not required to customize DesignFlow. Our intuitive
+                                    interface allows you to
+                                    make changes to your website without writing a single line of code. If you do have
+                                    coding skills, you
+                                    can access advanced customization options to tailor your site further.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Does DesignFlow support e-commerce functionality?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, DesignFlow fully supports e-commerce. You can easily set up an online store,
+                                    manage products,
+                                    process payments, and track orders through popular gateways—everything you need for
+                                    a smooth shopping
+                                    experience.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="350">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Can I import my own fonts and branding?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely. Upload your custom fonts, logos, and color palette so every page aligns
+                                    perfectly with your
+                                    brand identity.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="450">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How do I get support if I need help?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer a knowledge base, tutorial videos, and direct support via live chat, email,
+                                    or phone during
+                                    business hours. Our team’s always ready to jump in.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="550">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Will my website be fully responsive?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes—every DesignFlow site is responsive out of the box, ensuring a seamless
+                                    experience on desktops,
+                                    tablets, and smartphones.
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- accordion -->
+                </div><!-- col -->
+            </div><!-- row -->
+        </section>
+    </div><!-- container -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-divider"></div>
+
+            <div class="row">
+                <!-- Logo and Subscribe Section -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-plus fa-xs"></i>
+                        </div>
+                        <div class="logo-text">DesignFlow.</div>
+                    </div>
+
+                    <h3 class="footer-title">Subscribe</h3>
+                    <p class="footer-text">Join our newsletter for the latest updates, news, and more!</p>
+
+                    <form class="subscribe-form">
+                        <input type="email" class="form-input" placeholder="Email" aria-label="Email">
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h3 class="footer-title">Socials</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Behance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Template Links -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h3 class="footer-title">Template</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Licenses</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">404</a></li>
+                        <li><a href="#">Password</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript for interactivity -->
+    <script src="script.js"></script>
+</body>
+
+</html>
