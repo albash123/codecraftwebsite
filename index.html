@@ -46,15 +46,13 @@
 
                 <!-- Cart + CTA -->
                 <div class="d-flex align-items-center gap-3">
-                    <a href="#" class="text-dark position-relative cart-btn">
-                        <i class="fas fa-shopping-cart fs-5"></i>
-                        <span class="cart-count">2</span>
-                    </a>
-                    <a href="#" class="btn cta-btn">Buy Template</a>
+
+                    <a href="#" class="btn cta-btn">Contact us </a>
                 </div>
             </div>
         </div>
     </nav>
+
 
 
 
@@ -66,8 +64,15 @@
         });
     </script>
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container text-center">
+    <section class="hero-section position-relative overflow-hidden">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/wavy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Hero Content -->
+        <div class="container text-center position-relative z-1">
             <div class="hero-badge">
                 <span class="hero-badge-icon">
                     <i class="fas fa-plus"></i>
@@ -81,19 +86,12 @@
         </div>
 
         <!-- Floating Icons -->
-        <div class="floating-icon icon-layers">
-            <i class="fas fa-layer-group"></i>
-        </div>
-        <div class="floating-icon icon-star">
-            <i class="fas fa-star"></i>
-        </div>
-        <div class="floating-icon icon-pen">
-            <i class="fas fa-pen"></i>
-        </div>
-        <div class="floating-icon icon-bolt">
-            <i class="fas fa-bolt"></i>
-        </div>
+        <div class="floating-icon icon-layers"><i class="fas fa-layer-group"></i></div>
+        <div class="floating-icon icon-star"><i class="fas fa-star"></i></div>
+        <div class="floating-icon icon-pen"><i class="fas fa-pen"></i></div>
+        <div class="floating-icon icon-bolt"><i class="fas fa-bolt"></i></div>
     </section>
+
     <!-- 🔥 Optional: subtle parallax on scroll -->
     <script>
         document.addEventListener('scroll', () => {
@@ -103,6 +101,10 @@
             });
         });
     </script>
+
+
+
+
 
 
 
@@ -127,6 +129,331 @@
                 <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
                 <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
                 <img src="https://via.placeholder.com/150x40" class="client-logo" alt="Client Logo">
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid main_container_how">
+        <div class="row info_display-hero-section">
+            <div class="col-12">
+                <h1 class="info_display-main-heading">Here is How <span id="typing-text"
+                        class="info_display-purple-text">WE</span> Solve These Problems</h1>
+            </div>
+
+        </div>
+
+        <script>
+            const element = document.getElementById('typing-text');
+            const texts = ["WE", "Qnzak"];  // The two words to alternate
+            const typingSpeed = 120;  // Typing speed in milliseconds
+            const backspaceSpeed = 60;
+            const pauseBetweenWords = 800;
+
+            function typeOutText(text, callback) {
+                let i = 0;
+                element.textContent = ""; // Clear the text before typing
+                const interval = setInterval(() => {
+                    element.textContent += text[i];
+                    i++;
+                    if (i >= text.length) {
+                        clearInterval(interval);
+                        if (callback) callback();
+                    }
+                }, typingSpeed);
+            }
+
+            function backspaceText(callback) {
+                let i = element.textContent.length;
+                const backspace = setInterval(() => {
+                    element.textContent = element.textContent.slice(0, -1);
+                    i--;
+                    if (i <= 0) {
+                        clearInterval(backspace);
+                        if (callback) callback();
+                    }
+                }, backspaceSpeed);
+            }
+
+            function cycleTyping() {
+                let index = 0;
+                function loop() {
+                    typeOutText(texts[index], () => {
+                        setTimeout(() => {
+                            backspaceText(() => {
+                                index = (index + 1) % texts.length; // Switch between "WE" and "qnzak"
+                                loop(); // Restart typing after backspacing
+                            });
+                        }, pauseBetweenWords); // Pause between words
+                    });
+                }
+                loop(); // Start the typing animation
+            }
+
+            // Start the typing animation on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                setTimeout(cycleTyping, 1000); // Start after 1 second delay
+            });
+        </script>
+
+
+        <!--here is how Qanzak Solves the problem-->
+        <!-- ====== Feature + Image block ====== -->
+        <div class="container container_how">
+            <div class="row">
+                <!-- Left column – Features -->
+                <div class="col-12 col-md-6  ">
+                    <div class="info_display-feature-section">
+                        <h2 class="info_display-feature-title">Get Real-time Insights</h2>
+                        <p class="info_display-feature-description">
+                            Eliminate project delays, communication breakdowns, and quality gaps with a live dashboard
+                            that keeps you informed at every step. See the reality — not outdated reports.
+                        </p>
+
+                        <ul class="info_display-feature-list">
+                            <!-- Each <li> holds: a clickable <button> & a hidden <div> -->
+                            <li data-image="assets/progress.png">
+                                <button class="feature-button">Track Project Progress Instantly</button>
+                                <div class="feature-details">
+                                    Instantly view current completion %, critical tasks, and blockers—no more
+                                    “last-week’s” status PDFs.
+                                </div>
+                            </li>
+
+                            <li data-image="assets/scope.png">
+                                <button class="feature-button">Prevent Scope Creep with Clear Milestones</button>
+                                <div class="feature-details">
+                                    Visual milestone gates keep stakeholders aligned and freeze requirements once
+                                    approved.
+                                </div>
+                            </li>
+
+                            <li data-image="assets/quality.png">
+                                <button class="feature-button">Ensure High Quality through Live QA Reports</button>
+                                <div class="feature-details">
+                                    Auto-generated QA dashboards surface defects the moment they’re logged, so you can
+                                    fix
+                                    issues before they snowball.
+                                </div>
+                            </li>
+
+                            <li data-image="assets/team.png">
+                                <button class="feature-button">Monitor Team Efficiency and Bottlenecks</button>
+                                <div class="feature-details">
+                                    Drill down into cycle times, workload balance, and idle periods to remove
+                                    bottlenecks
+                                    fast.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right column – Dashboard image -->
+                <div class="col-12 col-md-6">
+                    <div class="info_display-dashboard-container">
+                        <img id="dashboardImage" src="assets/progress.png" alt="Metric Financial Dashboard"
+                            class="info_display-dashboard-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====== JavaScript ====== -->
+        <script>
+            const features = document.querySelectorAll(".info_display-feature-list li");
+            const dashboardImage = document.getElementById("dashboardImage");
+
+            features.forEach((li) => {
+                const btn = li.querySelector(".feature-button");
+                const details = li.querySelector(".feature-details");
+
+                btn.addEventListener("click", () => {
+                    // 1. Swap the image
+                    dashboardImage.src = li.dataset.image;
+
+                    // 2. Collapse any open detail boxes & remove active class
+                    features.forEach((item) => {
+                        item.querySelector(".feature-details").style.display = "none";
+                        item.classList.remove("active");
+                    });
+
+                    // 3. Expand the clicked one & mark active
+                    details.style.display = "block";
+                    li.classList.add("active");
+                });
+            });
+        </script>
+
+
+
+    </div>
+
+
+    <!--Ceo message -->
+    <div class=" ceo_message_box">
+        <div class="ceo-section">
+            <h1 class="ceo-title">CEO's Message</h1>
+
+            <div class="profile-img-container">
+                <img src="assets/ne.png" alt="CEO Profile" class="profile-img">
+            </div>
+
+            <h2 class="ceo-name">Muhammad Naushad Anjum</h2>
+
+            <div class="quote-container">
+                <span class="quote-mark quote-mark-left">&ldquo;</span>
+                <p class="ceo-message">
+                    Lorem ipsum dolor sit amet consectetur. Consectetur integer eget faucibus netus ac vitae. Tellus hac
+                    eleifend enim turpis vitae. Turpis eu sed nec consequat morbi pellentesque est feugiat molestie.
+                    Nisi dolor vulputate ante condimentum neque faucibus. Odio vulputate neque quam amet. Quisque sit
+                    non fermentum justo enim tortor integer suspendisse consectetur. Sit nascetur praesent blandit
+                    posuere facilisis rhoncus amet. Urna egestas euismod proin neque.
+                </p>
+                <span class="quote-mark quote-mark-right">&rdquo;</span>
+            </div>
+        </div>
+    </div>
+    <!--our team section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-title">Our Exceptional Team</h2>
+            <p class="team-subtitle">Meet our outstanding team - a synergy of talent, creativity, and dedication,
+                crafting success together.</p>
+
+            <!-- Carousel for small screens -->
+            <div id="teamCarousel" class="carousel slide d-block d-sm-none" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- First team member -->
+                    <div class="carousel-item active">
+                        <div class="team-member">
+                            <img src="assets/sadia_pic.jpg" alt="Team member" class="member-img">
+                            <h4 class="member-name">William Foster</h4>
+                            <p class="member-position">Co-Founder & CEO</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second team member -->
+                    <div class="carousel-item">
+                        <div class="team-member">
+                            <img src="assets/me.jpg" alt="Team member" class="member-img">
+                            <h4 class="member-name">Emily Jonson</h4>
+                            <p class="member-position">CEO</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third team member -->
+                    <div class="carousel-item">
+                        <div class="team-member">
+                            <img src="assets/sadia_pic.jpg" alt="Team member" class="member-img">
+                            <h4 class="member-name">Harshita Patel</h4>
+                            <p class="member-position">HR</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fourth team member -->
+                    <div class="carousel-item">
+                        <div class="team-member">
+                            <img src="assets/kashif.jpg" alt="Team member" class="member-img">
+                            <h4 class="member-name">Eleanor Morales</h4>
+                            <p class="member-position">HR</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                        <i class="fas fa-chevron-left"></i> <!-- Left arrow icon -->
+                    </span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                        <i class="fas fa-chevron-right"></i> <!-- Right arrow icon -->
+                    </span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+            <!-- Grid for large screens -->
+            <div class="row d-none d-sm-flex">
+                <div class="col-lg-3 col-md-6 col-sm-6 team-member">
+                    <img src="assets/shahzad.jpg" alt="Team member placeholder" class="member-img">
+                    <h4 class="member-name">Shahzad</h4>
+                    <p class="member-position">Hr Generalist</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 team-member">
+                    <img src="assets/me.jpg" alt="Team member placeholder" class="member-img">
+                    <h4 class="member-name">Albash ul haq</h4>
+                    <p class="member-position"> Sr Software Engineer/Product specialist</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 team-member">
+                    <img src="assets/kashif.png" alt="Team member placeholder" class="member-img">
+                    <h4 class="member-name">Kashif Rehman</h4>
+                    <p class="member-position">Sr Senior Android Engineer</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 team-member">
+                    <img src="assets/sadia_pic.jpg" alt="Team member placeholder" class="member-img">
+                    <h4 class="member-name">Sadia Azam</h4>
+                    <p class="member-position">Ui/ux specialist Graphic designer</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 team-member">
+                    <img src="assets/saif.jpg" alt="Team member placeholder" class="member-img">
+                    <h4 class="member-name">Saif </h4>
+                    <p class="member-position">Digital Marketing Specialist</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 team-member">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yv7tDPXaudaZ7yUMrlIy5vpN253kZx.png"
+                        alt="Team member placeholder" class="member-img">
+                    <h4 class="member-name">Eleanor Morales</h4>
+                    <p class="member-position">HR</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
